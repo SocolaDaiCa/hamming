@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Ahihi - Socola</title>
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<style>
+			body{
+				width: 500px;
+			}
+			*{
+				/*font-size: 14px;*/
+			}
+			input{ display: inline; width: 50%; }
+		</style>
+	</head>
+	<body>
+		<div class="" id= "app">
+			<!-- <div class="row"> -->
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					Hamming
+					<input type="text" v-model="hammingIn"><br>
+					Mã hamming: {{resHamming}} <br>
+					Check
+					<input type="text" v-model="hammingBit"> <br>
+					Decode: {{hammingDeCode}} <br>
+					Bit lỗi: {{bitErr}} <br>
+					Dec/Char to bin
+					<input type="text" v-model="dec">
+					bit: {{dectobin}}
+				</div>
+				<div id="and-ip" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					<p>Phép And 2 IP</p>
+					IP 1: <input type="text" v-model="ip1"> <br>
+					IP 2: <input type="text" v-model="ip2"> <br>
+					Result: {{resAndIP}} <br>
+					Result bit: {{resAndIPBit}}
+				</div>
+			<!-- </div> -->
+			<!-- <div class="row"> -->
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					<!-- <p>Đếm số mạng con và số máy mỗi mạng khi biết Mask và lớp</p>
+					Mask <input type="text" v-model="mask">
+					<div class="radio">
+						<label><input type="radio" v-model="class" value="A"> A 1-126</label><br>
+						<label><input type="radio" v-model="class" value="B"> B 128 - 191</label><br>
+						<label><input type="radio" v-model="class" value="C"> C 192-223</label> <br>
+						Mạng con: {{netChild}} <br>
+						Máy mỗi mạng: {{pcPerNet}}
+					</div> -->
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					
+				</div>
+			<!-- </div> -->
+			<!-- <div class="row"> -->
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					UDP
+					<input type="text" v-model="inputCheckSum"><br>
+					{{resCheckSum}}
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					CRC
+					<input type="text" v-model="inputCRC">
+					<input type="text" v-model="inputG">
+					res: {{resCRC}}
+				</div>
+			<!-- </div> -->
+			<!-- 			<div class="ma-tran-chan-le">
+				Chuỗi: <input type="text" v-model="chanleIn"> <br>
+				Mã chẵn lẻ: <br>
+				{{resChanLe}}
+			</div> -->
+		</div>
+		
+		<script src="vendor/vue/vue.min.js"></script>
+		<script src="js/haming.js"></script>
+	</body>
+</html>
